@@ -1,9 +1,12 @@
 import React from 'react';
 import './Board.css';
+import Game from './Game';
 
 function Board() {
   return (
     <div className="Board">
+
+      <Game />
      
       <table className="red">
         <tbody>
@@ -13,20 +16,9 @@ function Board() {
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>&nbsp;</td>   
           </tr>
           <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -41,6 +33,13 @@ function Board() {
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
@@ -50,10 +49,8 @@ function Board() {
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -68,10 +65,3 @@ function Board() {
 }
 
 export default Board;
-
-
-// --> när en "ruta klickas på - ändra till rätt class (enligt färg)" 
-// <td class="blue">&nbsp;</td>
-//  <td class="red">&nbsp;</td>
-
-//  (använd logiken från TIC-TACK-TOE??)
