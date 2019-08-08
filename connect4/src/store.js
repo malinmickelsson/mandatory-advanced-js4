@@ -2,7 +2,7 @@ import {createStore} from 'redux';
 
 //Initial state for my store
 const initial =  {
-    current: 'red', // kan även vara blå
+    current: 'red',
     board: [ // 7 col X 6 rows
         [], // col 1   [0]
         [], // col 2   [1]
@@ -16,17 +16,18 @@ const initial =  {
 
 function reducer(state, action) {
     if (action.type === 'DROP_TILE') { //if a tile is dropped
-        console.log('Tile placed in column ' + action.payload);
+        console.log('Tile droped in column ' + action.payload);
+
         const tile = state.current; // aningen röd eller blå
-        const col = state.board(action.payload).concat(tile); // ny kolumn
+        const col = state.board[action.payload].concat(tile); // ny kolumn
                                               //concat() joins strings
 
         const board = state.board.slice(); // kopiera board (kan inte använda befintliga)   
-        board[action.payload] = col; // uppdatera kolumnen med ny bricka (tile)
+        board[action.payload] = col; // kombinera kolumn + board = uppdatera kolumnen med ny bricka (tile)
 
         return {
             current: state.current === 'red' ? 'blue' : 'red',
-            board: board,
+            board: board,       
         };
     }
 

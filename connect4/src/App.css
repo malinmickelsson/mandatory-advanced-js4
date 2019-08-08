@@ -10,3 +10,13 @@
   font-family: monospace; /* monospace = allting har samma bredd*/
   cursor: crosshair;
 }
+
+.cell.p1 { /*blue tile*/
+  background-color: blue;
+  color: white;
+}
+
+.cell.p2 { /*red tile*/
+  background-color: red;
+  color: white;
+}

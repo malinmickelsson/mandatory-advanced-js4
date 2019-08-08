@@ -1,8 +1,5 @@
 import React, { Component} from 'react';
-
-//---------------------------------------
 import './App.css';
-//---------------------------------------
 
 import GridCell from './GridCell';
 
@@ -22,7 +19,6 @@ class App extends Component {
     } 
     return (
       <div className="App">
-        
         
         {cells}
       </div>

@@ -10,9 +10,23 @@ class GridCell extends Component { // x = col,  y = row
         this.props.sendTileDrop(this.props.x);
     }
     
-    render() {  
+    render() {
+        const board = this.props.board;
+        const x = this.props.x;
+        const y = this.props.y;
+
+        let classes = 'cell';
+
+        if(board[x][y] !== undefined) {
+            if (board[x][y] === 'red') {
+                classes += ' p2';
+            } else {
+                classes += ' p1';
+            }
+        }
+
         return (
-            <div className='cell' onClick={() => this.handleClick()}>  
+            <div className={classes} onClick={() => this.handleClick()}>  
                 <p> {this.props.x}, {this.props.y} </p>
             </div>
         );
@@ -20,7 +34,9 @@ class GridCell extends Component { // x = col,  y = row
 }
 
 const stateToProps = state => {
-    return {};
+    return {
+        board: state.board,
+    };
 };
 
 const dispatchToProps = dispatch => {
