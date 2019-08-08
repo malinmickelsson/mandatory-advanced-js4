@@ -15,9 +15,19 @@ const initial =  {
 };
 
 function reducer(state, action) {
-    if (action.type === 'DROP_TILE') {
-        //do a thing
+    if (action.type === 'DROP_TILE') { //if a tile is dropped
         console.log('Tile placed in column ' + action.payload);
+        const tile = state.current; // aningen röd eller blå
+        const col = state.board(action.payload).concat(tile); // ny kolumn
+                                              //concat() joins strings
+
+        const board = state.board.slice(); // kopiera board (kan inte använda befintliga)   
+        board[action.payload] = col; // uppdatera kolumnen med ny bricka (tile)
+
+        return {
+            current: state.current === 'red' ? 'blue' : 'red',
+            board: board,
+        };
     }
 
     return state;
