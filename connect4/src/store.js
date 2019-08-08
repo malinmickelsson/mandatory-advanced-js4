@@ -17,7 +17,7 @@ const initial =  {
 function reducer(state, action) {
     if (action.type === 'DROP_TILE') {
         //do a thing
-        console.log('landing in column ' + action.payload);
+        console.log('Tile placed in column ' + action.payload);
     }
 
     return state;

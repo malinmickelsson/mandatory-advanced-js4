@@ -10,15 +10,15 @@ class App extends Component {
   render() {
     const cells = [];
 
-    // sortera rader och culumner
+    // sortera rader och kolumner
     for (let y = 5; y >= 0; y--) {
       const row =[];
 
       for (let x = 0; x < 7; x++) {
-        row.push(<GridCell x={x} y={y} />);
+        row.push(<GridCell key={x} x={x} y={y} />);
       }
 
-      cells.push(<div className='row'>{row}</div>)
+      cells.push(<div key={y} className='row'>{row}</div>)
     } 
     return (
       <div className="App">
