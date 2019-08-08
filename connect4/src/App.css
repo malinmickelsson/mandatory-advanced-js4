@@ -36,5 +36,5 @@
   border: solid 1px black;
   display: inline-block;
   padding: 20px;
-  font-family: monospace; 
+  font-family: monospace; /* monospace = allting har samma bredd*/
 }

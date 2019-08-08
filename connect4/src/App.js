@@ -10,7 +10,8 @@ class App extends Component {
   render() {
     const cells = [];
 
-    for (let y = 0; y < 6; y++) {
+    // sortera rader och culumner
+    for (let y = 5; y >= 0; y--) {
       const row =[];
 
       for (let x = 0; x < 7; x++) {
