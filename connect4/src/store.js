@@ -4,13 +4,13 @@ import {createStore} from 'redux';
 const initial =  {
     current: 'red', // kan även vara blå
     board: [ // 7 col X 6 rows
-        [], // col 1
-        [], // col 2
-        [], // col 3
-        [], // col 4
-        [], // col 5
-        [], // col 6
-        [], // col 7
+        [], // col 1   [0]
+        [], // col 2   [1]
+        [], // col 3   [2]
+        [], // col 4   [3]
+        [], // col 5   [4]
+        [], // col 6   [5]
+        [], // col 7   [6]
     ],
 };
 
