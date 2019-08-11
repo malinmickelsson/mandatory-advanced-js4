@@ -72,15 +72,14 @@ function checkRowHas4Equals(board, currentColor, startX, y) {
     // Step along row
     for (let x = startX; x < endX; x++){
 
-        // get tile to check
+        // get currentColorToCheck to check
         let currentColorToCheck = board[x][y];
-        console.log('tileToCheck ' + currentColorToCheck);
+
 
         // Check if color is the one we are looking for
         if (currentColorToCheck === currentColor) {
             
             countEqualColors++;
-            console.log('countEqualColors ' + countEqualColors);
         }
     }
 
@@ -98,15 +97,15 @@ function checkColHas4Equals(board, currentColor, startY, x) {
     // Step along row
     for (let y = startY; y < endY; y++){
 
-        // get tile to check
+        // get currentColorToCheck to check
         let currentColorToCheck = board[x][y];
-        console.log('tileToCheck ' + currentColorToCheck)
+        //console.log('tileToCheck ' + currentColorToCheck)
 
         // Check if color is the one we are looking for
         if (currentColorToCheck === currentColor) {
             
             countEqualColors++;
-            console.log('countEqualColors ' + countEqualColors);
+            //console.log('countEqualColors ' + countEqualColors);
         }
     }
 
@@ -127,10 +126,9 @@ function checkDiagonalHas4EqualsUp(board, currentColor, startX, startY) {
     let y = startY;
 
     while( x < endX && y < endY ) {
-         // get tile to check
+         // get currentColorToCheck to check
          let currentColorToCheck = board[x][y];
-         console.log('tileToCheck ' + currentColorToCheck)
- 
+
          // Check if color is the one we are looking for
          if (currentColorToCheck === currentColor) {
              
@@ -155,15 +153,14 @@ function checkDiagonalHas4EqualsDown(board, currentColor, startX, startY) {
     let y = startY;
 
     while( x < endX && y >= endY ) {
-         // get tile to check
+         // get currentColorToCheck to check
          let currentColorToCheck = board[x][y];
-         console.log('tileToCheck ' + currentColorToCheck)
- 
+         
          // Check if color is the one we are looking for
          if (currentColorToCheck === currentColor) {
              
              countEqualColors++;
-             console.log('countEqualColors ' + countEqualColors);
+             //console.log('countEqualColors ' + countEqualColors);
          }
          x++;
          y--;
